@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Welcome!</title>
+    </head>
+    <body>
+    <table>
+        <tr>
+            <th>EMAIL</th>
+            <th>ROLE</th>
+        </tr>
+        {%for user in users %}
+        <tr>
+            <td>{{user.email}}</td>
+            {%for roles in user.roles %}
+                <td>{{roles}}</td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+    <table>
+    </body>
+</html>
